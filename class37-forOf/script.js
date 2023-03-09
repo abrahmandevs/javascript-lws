@@ -9,3 +9,11 @@ for (let x of fruits) {
 	aray += `<li>${x}</li>`;
 	document.getElementById("div1").innerHTML = aray + "for of loop"
 }
+const user = 'rahman';
+(function (value) {
+	let v = '';
+	for (let x of value) {
+		v += `<li>${x}</li>`;
+		document.getElementById("div2").innerHTML = v + "iife";
+	}
+})(user);
