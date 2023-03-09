@@ -20,3 +20,17 @@ if (isNaN(number)) {
 }
 // check a numbe or not by tenary
 document.getElementById('div4').innerHTML = isNaN(number) ? `It is not a Number ${number}` : `Gret your age is ${number}`;
+const arrayFn = function (age) {
+    return age > 5 ? 'good job' : 'Fail';
+}
+console.log(arrayFn(4));
+console.log('2' > '12')
+{
+    let age, num = 12;
+    age = Number(num);
+    if (isNaN(age)) {
+        console.log("Input is not a number");
+    } else {
+        console.log((age < 18) ? "Too young" : "Old enough");
+    }
+}
