@@ -5,8 +5,12 @@ let i = "0",
 	count = ""
 while (i < fruits.length) {
 	count += `<li>${fruits[i]}</li>`
+	if (i > 3) {
+		document.write('break');
+		break;
+	}
 	i++
-	document.getElementById("div1").innerHTML = count + "While loop"
+	document.getElementById("div1").innerHTML = count + "While loop with break"
 }
 do {
 	count += `<li>${fruits[i]}</li>`
