@@ -1,4 +1,12 @@
 // while loop spacial use
+/* 
+Iterables are iterable objects (like Arrays).
+Iterables can be accessed with simple and efficient code.
+Iterables can be iterated over with for..of loops
+
+Iterating over a String
+Iterating over an Array
+*/
 const fruits = ["apple", "banana", "chile", "papaya", "pinapal", "orange", "mango"]
 
 let i = "0",
