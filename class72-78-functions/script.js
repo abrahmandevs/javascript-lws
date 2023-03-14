@@ -63,10 +63,10 @@ console.log(people.fullName.apply(people1, ['Dhaka', 'bangladesh'])); // functio
 Math.max.apply(null, [1, 2, 3]);
 
 // class77 functin closures
-function add() {
-	let counter = 0;
-	document.getElementById('counter').innerHTML = counter;
-	return function () {
-		this.counter += 1;
-	}
-}
+
+var button = document.getElementById("btnCount");
+count = 0;
+button.onclick = () => {
+	count += 1;
+	document.getElementById("counter").innerHTML = count;
+};
