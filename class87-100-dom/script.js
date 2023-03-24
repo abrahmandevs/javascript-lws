@@ -32,9 +32,30 @@ window.addEventListener("scroll", function () {
 });
 // mom navigation
 const notds = document.getElementById('div4');
-console.log(notds.nodeName);
-console.log(notds.nextSibling);
-console.log(notds.parentNode);
+const btn = document.getElementById('next');
 
+var x = '';
+btn.addEventListener('click', function () {
+    if (x <= notds.childNodes.length && x != null) {
+        x++
+    } else {
+        x = 0;
+    }
+    console.log(notds.childNodes[x]);
+});
+let b = notds.childNodes.length;
+console.log(notds.parentNode);
+console.log(notds.childNodes[0].nextElementSibling);
+//console.log(notds.firstChild.nextElementSibling);
+//console.log(notds.lastChild);
+//console.log(notds.nextSibling);
+//console.log(notds.previousSibling);
+const para = document.createElement("p")//make p tag
+const node = document.createTextNode("hello Text node welcome") // make tags valu
+para.appendChild(node) // <p>hello Text node welcome</p>
+const elemen = document.getElementById("div4");
+const nam = document.getElementById("name2");
+elemen.appendChild(para);
+elemen.insertBefore(para, nam)
 
 
