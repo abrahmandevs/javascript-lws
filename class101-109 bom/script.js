@@ -59,3 +59,33 @@ confirm.addEventListener('click', () => {
     }
     document.getElementById("demo").innerHTML = txt; */
 })
+
+//window Timeout object
+
+let timeCount;
+let intervelCount;
+let x = '';
+let setTime = document.getElementById('setTime')
+let stopTime = document.getElementById('stopTime')
+let setIntervel = document.getElementById('setIntervel')
+let stopIntervel = document.getElementById('stopIntervel')
+
+setTime.addEventListener('click', () => {
+    timeCount = setTimeout(() => {
+        message.innerHTML = `set time function start`
+    }, 1000);
+});
+stopTime.addEventListener('click', () => {
+    clearTimeout(timeCount)
+    message.innerHTML = `Stop Timeout function`
+
+});
+setIntervel.addEventListener('click', () => {
+    intervelCount = setInterval(() => {
+        message.innerHTML = `set intervel function start ${x++}`
+    }, 1000);
+})
+stopIntervel.addEventListener('click', () => {
+    clearInterval(intervelCount);
+    message.innerHTML = `Stop intervel function`
+})
