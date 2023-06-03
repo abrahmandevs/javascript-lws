@@ -132,3 +132,34 @@ Promise.race([promis1, promis2, promis3]).
     then((res) => { // show res which promise quick resolve that is race win
         console.log(res);
     });
+
+/// promise chaining
+const taskone = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('task 1 is resolved')
+        }, 3000);
+    })
+}
+const tasktwo = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('task 2 is resolved')
+        }, 2000);
+    })
+}
+const taskthree = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (resolve) {
+                resolve('task 3 is resolved');
+            } else {
+                reject('reject 3 is resolved');
+            }
+        }, 1000);
+    })
+}
+taskone().then((res) => console.log(res)) // if complete than show output
+tasktwo().then((res) => console.log(res)) // if taskone complte than show output
+taskthree().then((res) => console.log(res)) // if tasktwo complte than show output
+    .catch((err) => console.log(err.message))
