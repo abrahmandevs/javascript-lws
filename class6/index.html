@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>\
+<script>
+    const fname = 'abdur ';
+    const lname = 'rahman';
+    const person = {
+        name: 'rahman',
+        age: 21,
+        location: 'bangladesh'
+    }
+    for (x = 0; x < person.length; x++) {
+
+    }
+    const revfu = (txt) => {
+        return txt.split(' ').reverse().join(' ')
+    }
+    const revfu1 = (txt) => txt.split(' ').reverse().join(' ')
+
+    const ifn = (function (s) {
+        return s
+    })('ls')
+
+    const sun = (n) => {
+        return n.reduce((o, n) => o + n)
+    }
+    console.log(sun([6, 5, 4]))
+
+
+
+
+
+
+    let temp = `thsis is my ${name}`
+    let totalprice = `thsis is my ${45 + 8} = ${sun([2,4,5,6])}`
+    console.log(temp)
+    console.log(totalprice)
+
+
+    const person2 = {
+        fname: fname,
+        lname: lname,
+        age: 12,
+        gen: 'm',
+        introduce: function () {
+            console.log(`hi i am ${this.fname} ${this.lname}`)
+        }
+    }
+    const person_es6 = {
+        fname,
+        lname,
+        introduce() {
+            console.log(`hi i am ${this.fname} ${this.lname}`)
+        }
+    }
+
+    //console.log(person2)
+    console.log(person_es6)
+    person2.introduce()
+    person_es6.introduce()
+
+
+    function sum(x, y, ...numbers) {
+        return numbers.reduce((o, n) => o + n);
+    }
+    const sum2 = (...numbers) => numbers.reduce((o, n) => o + n);
+
+    console.log(sum(1, 2, 3, 47, 5))
+    console.log(sum2(1, 2, 3, 4, 5))
+    //disturating
+    const data = [1, 2, 3, 4, 66, 77, 8];
+    const [a, b, c, ...f] = data;
+    console.log([a, b, c, f])
+
+    const {
+        ...res
+    } = person2;
+    console.log(res.gen)
+
+    function getData() {
+        const country = 'Bangladesh'
+        const capital = 'dhaka'
+        return {
+            country,
+            capital
+        }
+    }
+    const details = getData()
+    console.log(details)
+    const {
+        country,
+        capital
+    } = getData()
+    console.log(country)
+    console.log(capital)
+    // for in / of
+    const cities = ['dhaka', 'bogra', 'natore', 'rajshahi']
+    const country2 = {
+        name: 'bangladesh',
+        capital: 'dhaka'
+    }
+
+    //for (city of cities) {
+    //    console.log(city)
+    //}
+    for (city in country2) {
+        console.log(country2[city])
+    }
+
+    // clone obj
+
+
+    const men = {
+        fname: fname,
+        lname: lname,
+        age: 12,
+    }
+
+    //const another = men
+    const another = Object.assign({}, men)
+    another.fname = 'koram'
+    console.log(men)
+    console.log(another)
+</script>
